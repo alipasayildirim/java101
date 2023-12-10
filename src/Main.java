@@ -3,12 +3,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-<<<<<<< HEAD
-        int mat,fizik,kimya,turkce;
-
-        Scanner input = new Scanner(System.in);
-
-=======
         Scanner input = new Scanner(System.in);
 
         /* Not Ortalamsı Hesaplama
