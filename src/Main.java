@@ -3,13 +3,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+
         Scanner input = new Scanner(System.in);
 
         /* Not Ortalamsı Hesaplama
 
         int mat,fizik,kimya,turkce;
 
->>>>>>> 4395972 (Update)
         System.out.println("Matematik notunuzu giriniz.");
          mat = input.nextInt();
 
@@ -25,10 +25,10 @@ public class Main {
         int toplam  = mat + fizik + kimya + turkce;
         double sonuc = toplam / 4;
         System.out.println(sonuc);
-<<<<<<< HEAD
-=======
 
     */
+
+/* KDV Hesaplama
 
 
         double price;
@@ -49,7 +49,28 @@ public class Main {
         }
 
 
+*/
+        double start = 10;
+        double perKm = 2.20;
+        double minPrice = 20;
+        double km;
+        double totalPrice;
 
->>>>>>> 4395972 (Update)
+        System.out.println("Kaç kilometre yol aldınız?");
+        km = input.nextDouble();
+
+        totalPrice = km * perKm;
+        totalPrice += start;
+        totalPrice = totalPrice >= minPrice ?  start + (km * perKm) :  minPrice;
+
+        System.out.println("Taksimetre : " + totalPrice);
+
+
+
+
+
+
+
+
     }
 }
