@@ -102,6 +102,9 @@ public class Main {
 
          */
 
+        /* Manav Kasa
+
+
         double armut = 2.14;
         double elma = 3.67;
         double domates = 1.11;
@@ -129,6 +132,36 @@ public class Main {
         totalPrice = armutKg + elmaKg + domatesKg + muzKg + patlicanKg;
         System.out.println("Toplam fiyat : " + totalPrice);
 
+        */
+        System.out.println("Bir sayı giriniz");
+        double x = input.nextDouble();
+        System.out.println("Bir sayı giriniz");
+        double y = input.nextDouble();
+        System.out.println("İşlem seçiniz");
+        char operator = input.next().charAt(0);
+        double sonuc;
+        switch (operator) {
+            case '+':
+              sonuc = x + y;
+              break;
+
+            case '-':
+                sonuc = x - y;
+                break;
+
+            case '*':
+                sonuc = x * y;
+                break;
+
+            case '/':
+                sonuc = x / y;
+                break;
+
+            default:
+                System.out.println("hatalı islem");
+                return;
+        }
+        System.out.println(sonuc);
 
     }
 }
