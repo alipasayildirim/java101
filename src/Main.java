@@ -50,6 +50,9 @@ public class Main {
 
 
 */
+
+        /* Taksimetre Programla
+
         double start = 10;
         double perKm = 2.20;
         double minPrice = 20;
@@ -61,10 +64,23 @@ public class Main {
 
         totalPrice = km * perKm;
         totalPrice += start;
+
         totalPrice = totalPrice >= minPrice ?  start + (km * perKm) :  minPrice;
 
         System.out.println("Taksimetre : " + totalPrice);
 
+*/
+
+        double yariCap;
+        double pi = 3.14;
+
+        System.out.println("Lütfen dairenib yarı çapını giriniz :");
+        yariCap = input.nextDouble();
+        double daireCevre = 2 * pi * yariCap;
+        double daireAlan =  pi * (yariCap * yariCap);
+
+        System.out.println("Dairenin Çevresi : " + daireCevre);
+        System.out.println("Dairenin Alanı  : " + daireAlan);
 
 
 
