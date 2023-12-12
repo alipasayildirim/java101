@@ -165,7 +165,7 @@ public class Main {
         }
         System.out.println(sonuc);
         */
-
+        /*
         String username,password,newPassword;
 
         username = input.nextLine();
@@ -183,6 +183,31 @@ public class Main {
                 System.out.println("Şifreniz başarı ile oluşturuldu");
                 newPassword = password;
             }
+        }
+        */
+        int mat,fizik,kimya,turkce;
+
+        System.out.println("Matematik notunuzu giriniz.");
+        mat = input.nextInt();
+
+        System.out.println("Fİzik notunuzu giriniz.");
+        fizik = input.nextInt();
+
+        System.out.println("Kimya notunuzu giriniz.");
+        kimya = input.nextInt();
+
+        System.out.println("Türkçe notunuzu giriniz.");
+        turkce = input.nextInt();
+
+        int toplam  = mat + fizik + kimya + turkce;
+        double ortalama = toplam / 4;
+
+        System.out.println(ortalama);
+
+        if (ortalama >= 55 ) {
+            System.out.println("Tebrikler sınıfı geçtiniz");
+        }else {
+            System.out.println("Seneye görüşmek üzere");
         }
         }
     }
