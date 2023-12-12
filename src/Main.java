@@ -185,6 +185,8 @@ public class Main {
             }
         }
         */
+
+        /* Ortalama Hesaplama
         int mat,fizik,kimya,turkce;
 
         System.out.println("Matematik notunuzu giriniz.");
@@ -209,5 +211,24 @@ public class Main {
         }else {
             System.out.println("Seneye görüşmek üzere");
         }
-        }
+
+         */
+
+        int heat;
+
+        System.out.print("Sıcaklığı giriniz : ");
+        heat = input.nextInt();
+            if (heat < 5) {
+                System.out.println("Kayak yapmaya gidebilirsiniz.");
+            } else if (heat >= 5 && heat < 25) {
+                if (heat <= 15) {
+                    System.out.println("Sinemaya gidebilirsiniz.");
+                }
+                if (heat >= 10 ) {
+                    System.out.println("Pikniğe gidebilirsinizç");
+                }
+            }else {
+                System.out.println("Yüzmeye gidebilirsiniz.");
+            }
+    }
     }
