@@ -71,6 +71,8 @@ public class Main {
 
 */
 
+        /*Dairenin Alanını ve Çevresini Hesaplayan Program
+
         double yariCap;
         double pi = 3.14;
 
@@ -82,10 +84,50 @@ public class Main {
         System.out.println("Dairenin Çevresi : " + daireCevre);
         System.out.println("Dairenin Alanı  : " + daireAlan);
 
+*/
+
+        /* Vücut Kitle İndeksi Hesaplama
+
+        double kg,boy,vucutKitleIndeksi;
+
+        System.out.print("Lütfen kilonuzu giriniz : ");
+        kg = input.nextDouble();
+        System.out.print("Lütfen boyunuzu giriniz : ");
+        boy = input.nextDouble();
+
+        vucutKitleIndeksi = kg / (boy * boy);
+
+        System.out.println( "Vücut Kitle İndeksi :" + vucutKitleIndeksi);
 
 
+         */
 
+        double armut = 2.14;
+        double elma = 3.67;
+        double domates = 1.11;
+        double muz =  0.95;
+        double patlican = 5.00;
+        double armutKg,elmaKg,domatesKg,muzKg,patlicanKg , totalPrice;
 
+        System.out.print("Kaç kilo armut aldınız? : ");
+        armutKg  = input.nextDouble();
+        System.out.print("Kaç kilo elma aldınız? : ");
+        elmaKg  = input.nextDouble();
+        System.out.print("Kaç kilo domates aldınız? : ");
+        domatesKg  = input.nextDouble();
+        System.out.print("Kaç kilo muz aldınız? : ");
+        muzKg  = input.nextDouble();
+        System.out.print("Kaç kilo patlıcan aldınız? : ");
+        patlicanKg  = input.nextDouble();
+
+        armutKg *= armut;
+        elmaKg *= elma;
+        domatesKg *= domates;
+        muzKg *= muz;
+        patlicanKg *= patlican;
+
+        totalPrice = armutKg + elmaKg + domatesKg + muzKg + patlicanKg;
+        System.out.println("Toplam fiyat : " + totalPrice);
 
 
     }
