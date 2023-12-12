@@ -234,6 +234,9 @@ public class Main {
 
          */
 
+        /* Sıralama
+
+
         int a,b,c;
         System.out.print("a sayısını giriniz : ");
         a = input.nextInt();
@@ -261,6 +264,63 @@ public class Main {
                 System.out.println("c>a>b");
             }
         }
+
+         */
+        String month;
+        int day;
+
+        System.out.println("Ay giriniz");
+        month = input.nextLine();
+        System.out.println("Gün Giriniz");
+        day = input.nextInt();
+
+        if (month.length()> 0 ) {
+            month = month.substring(0,1).toUpperCase() + month.substring(1);
+        }else {
+            System.out.println("lütfen bir ay giriniz");
+        }
+
+        if ((month.equals("Mart") && day >=21) || (month.equals("Nisan") && day <=20) ) {
+            System.out.println("Koç burcu");
+        }
+       else if ((month.equals("Nisan") && day >=21) || (month.equals("Mayıs") && day <=21) ) {
+            System.out.println("Boğa burcu");
+        }
+        else if ((month.equals("Mayıs") && day >=22) || (month.equals("Haziran") && day <=22) ) {
+            System.out.println("İkizler burcu");
+        }
+        else if ((month.equals("Haziran") && day >=23) || (month.equals("Temmuz") && day <=22) ) {
+            System.out.println("Yengeç burcu");
+        }
+        else if ((month.equals("Temmuz") && day >=23) || (month.equals("Ağustos") && day <=22) ) {
+            System.out.println("Aslan burcu");
+        }
+        else if ((month.equals("Ağustos") && day >=23) || (month.equals("Eylül") && day <=22) ) {
+            System.out.println("Başak burcu");
+        }
+        else if ((month.equals("Eylül") && day >=23) || (month.equals("Ekim") && day <=22) ) {
+            System.out.println("Terazi burcu");
+        }
+        else if ((month.equals("Ekim") && day >=23) || (month.equals("Kasım") && day <=21) ) {
+            System.out.println("Akrep burcu");
+        }
+        else if ((month.equals("Kasım") && day >=22) || (month.equals("Aralık") && day <=21) ) {
+            System.out.println("Yay burcu");
+        }
+        else if ((month.equals("Aralık") && day >=21) || (month.equals("Ocak") && day <=21) ) {
+            System.out.println("Oğlak burcu");
+        }
+        else if ((month.equals("Ocak") && day >=22) || (month.equals("Şubat") && day <=19) ) {
+            System.out.println("Kova burcu");
+        }
+        else if ((month.equals("Şubat") && day >=20) || (month.equals("Mart") && day <=20) ) {
+            System.out.println("Balık burcu");
+        } else {
+            System.out.println("Lütfen formu dikkatli doldurunuz!");
+        }
+
+
+
 
 
         }
