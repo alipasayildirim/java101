@@ -133,6 +133,8 @@ public class Main {
         System.out.println("Toplam fiyat : " + totalPrice);
 
         */
+
+        /* Hesap Makinesi
         System.out.println("Bir sayı giriniz");
         double x = input.nextDouble();
         System.out.println("Bir sayı giriniz");
@@ -162,6 +164,27 @@ public class Main {
                 return;
         }
         System.out.println(sonuc);
+        */
 
+        String username,password,newPassword;
+
+        username = input.nextLine();
+        password = input.nextLine();
+
+        if (username.equals("alipasa") && password.equals("yildirim")){
+            System.out.println("Giriş Başarılı");
+        }else {
+            System.out.println("Yanlış parola veya şifre girdiniz. Şifrenizi veya parolanızı değiştirmek ister misiniz ? ");
+
+            newPassword = input.nextLine();
+            if (newPassword.equals(newPassword)) {
+                System.out.println("eski şifreniz yenisi ile aynı olamaz");
+            }else {
+                System.out.println("Şifreniz başarı ile oluşturuldu");
+                newPassword = password;
+            }
+        }
+
+
+        }
     }
-}
