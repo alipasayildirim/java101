@@ -184,7 +184,5 @@ public class Main {
                 newPassword = password;
             }
         }
-
-
         }
     }
