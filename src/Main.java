@@ -266,6 +266,7 @@ public class Main {
         }
 
          */
+        /* Burç Bulma Programı
         String month;
         int day;
 
@@ -319,9 +320,66 @@ public class Main {
             System.out.println("Lütfen formu dikkatli doldurunuz!");
         }
 
+         */
 
+        /* Tek Çift
+        int n;
+        System.out.print("Lütfen bir sayı giriniz : ");
+        n = input.nextInt();
 
-
-
+        if ( n % 2 != 0) {
+            System.out.println("Weird");
+        } else if (n % 2 == 0 && (n >= 2 && n <= 5) ) {
+            System.out.println("Not Weird");
+        } else if (n % 2 == 0 && (n >= 6 && n <= 20)) {
+            System.out.println("Weird");
+        }else if (n % 2 == 0 && (n > 20)){
+            System.out.println("Not Weird");
         }
+
+         */
+
+        int km,age;
+        boolean roundTripTicket;
+        double perKmPrice = 0.10;
+        System.out.println("Kaç yaşındasınız ? ");
+        age = input.nextInt();
+        System.out.println("Kaç kilometre yol gideceksiniz?");
+        km = input.nextInt();
+        System.out.println("Gidiş Dönüş mü ? ");
+        roundTripTicket = input.nextBoolean();
+
+        double price = km * perKmPrice;
+        double newPrice,discount;
+        if (age < 12) {
+          discount  = price * 0.50;
+          newPrice = price - discount;
+            System.out.println("Ödenecek Tutar : " + newPrice);
+            if (roundTripTicket) {
+                discount = (price * 0.20) + discount;
+                newPrice = discount;
+                System.out.println("Ödenecek Tutar : " + newPrice * 2);
+            }
+        } else if (age > 12 && age < 24) {
+            discount = price * 0.10;
+            newPrice = price - discount;
+            System.out.println("Ödenecek Tutar : " + newPrice);
+            if (roundTripTicket) {
+                discount = (price * 0.20) + discount;
+                newPrice = discount;
+                System.out.println("Ödenecek Tutar : " + newPrice *2);
+            }
+        } else if (age > 65) {
+            discount = price * 0.30;
+            newPrice = price - discount;
+            System.out.println("Ödenecek Tutar : " + newPrice);
+            if (roundTripTicket) {
+                discount = (price * 0.20) + discount;
+                newPrice = discount;
+                System.out.println("Ödenecek Tutar : " + newPrice *2);
+            }
+        }
+
+
+    }
     }
