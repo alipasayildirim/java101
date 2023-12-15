@@ -383,6 +383,7 @@ public class Main {
 
           */
 
+        /* Çin Zodyağı Burcu Hesaplama
             int year;
         System.out.println("Doğum yılınızı giriniz : ");
             year = input.nextInt();
@@ -430,5 +431,132 @@ public class Main {
                      System.out.println("Hatalı yaş girdiniz");
                      return;
              }
+         */
+         /* Artık Yıl Hesaplama
+            int year;
+
+            System.out.println("Yıl Giriniz");
+            year = input.nextInt();
+
+            if (year % 4 == 0) {
+                System.out.println(year + " bir artık yıldır !");
+            }else {
+                System.out.println(year + " bir artık yıl değildir !");
+            }
+          */
+            /*
+            int sayi,i;
+            int count = 0;
+            int total = 0;
+            double average;
+            System.out.print("Sayı giriniz : ");
+            sayi = input.nextInt();
+            for( i = 0; i < sayi; i++){
+                if ((i % 3 == 0 && i % 4 == 0) && i !=0){
+                    total += i;
+                    count++;
+
+                }
+            }
+            average = total / count;
+        System.out.println("Ortalama : " + average);
+
+             */
+ /*
+        int n;
+        int total = 0;
+
+        do {
+            System.out.print("Bir sayı giriniz : ");
+            n = input.nextInt();
+            if (n % 2 == 0 && n % 4 == 0){
+                total += n;
+            }
+        }while (n % 2 == 0);
+        System.out.println("Toplam : " + total);
+
+  */
+
+        /*
+        int n;
+
+        System.out.print("Bir sayı giriniz : ");
+        n = input.nextInt();
+            for (int i = 1, j = 1; i <=n && j <= n; i*=4,j*=5 ){
+                System.out.println(i +" , "+ j);
+            }
+
+
+         */
+
+        // C(n,r) = n! / (r! * (n-r)!)
+            /*
+            int n,r;
+            int nTotal = 1;
+            int rTotal = 1;
+            int processTotal = 1;
+        System.out.println("Kaç elemanlı küme : ");
+            n = input.nextInt();
+        System.out.println("Kaç farklı grup : ");
+            r = input.nextInt();
+            for (int i =1; i<=n;i++){
+                nTotal = nTotal * i;
+            }
+            for (int j = 1; j <= r; j++){
+                rTotal = rTotal * j;
+            }
+
+            for (int k = 1; k <= n-r;k++){
+                processTotal = k * processTotal;
+            }
+
+        System.out.println("C(" + n + "," + r +") = " + nTotal / (rTotal * processTotal) );
+
+             */
+            /*
+        int n,k;
+        int total = 1;
+        System.out.print("Üssü alıncak sayı : ");
+        n = input.nextInt();
+        System.out.print("Üs olacak sayı : ");
+        k = input.nextInt();
+            for (int i = 1; i <=k; i++){
+                total *=n;
+
+            }
+
+        System.out.println(total);
+
+             */
+        System.out.print("Sayı Giriniz :");
+        int number = input.nextInt();
+        int basNumber = 0;
+        int tempNumber = number;
+        int basValue;
+        int result = 0;
+        int basPow;
+
+        while (tempNumber != 0) {
+            tempNumber /= 10;
+            basNumber++;
+        }
+
+        tempNumber = number;
+        while (tempNumber != 0) {
+            basValue = tempNumber % 10;
+
+            basPow = 1;
+            for (int i = 1; i <= basNumber; i++) {
+                basPow *= basValue;
+            }
+            result += basPow;
+            tempNumber /= 10;
+        }
+
+            if (number == result){
+                System.out.println("Armstrong Sayı");
+            }else {
+                System.out.println("Armstrong Sayı Değil");
+            }
         }
     }
