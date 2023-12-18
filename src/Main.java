@@ -528,6 +528,8 @@ public class Main {
         System.out.println(total);
 
              */
+
+        /*
         System.out.print("Sayı Giriniz :");
         int number = input.nextInt();
         int basNumber = 0;
@@ -558,5 +560,35 @@ public class Main {
             }else {
                 System.out.println("Armstrong Sayı Değil");
             }
+
+         */
+
+        /*
+            System.out.print("Bir sayı girininiz : ");
+            int n = input.nextInt();
+            double result = 0;
+            for (double i = 1; i <= n; i++){
+                result += 1/i;
+            }
+        System.out.println(result);
+
+        */
+        /*
+        System.out.print("Basamak sayısı giriniz :");
+        int n = input.nextInt();
+
+        for (int i = 1; i<= n; i++){
+            for (int k = 1; k<= n-i; k++){
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= i*2-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+         */
+
         }
     }
