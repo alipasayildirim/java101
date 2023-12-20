@@ -1,10 +1,151 @@
 import java.util.Scanner;
 
 public class Main {
+    /*
+    static boolean isPalindrom(int number) // True or False
+    {
+        //numberın basamak sayı kullanarak tersini elde etmek
+        int temp = number, reversedNumber = 0, lastNumber;
+
+        while (temp != 0)
+        {
+            //son rakam
+            lastNumber = temp % 10;
+            reversedNumber = (reversedNumber * 10) + lastNumber; //ilk rakam yaptık
+            temp /= 10;
+        }
+        if (number == reversedNumber)
+        {
+            System.out.println("Palindrom Sayıdır.");
+        }
+        else
+        {
+            System.out.println("Palindorm sayı değil.");
+        }
+        return true;
+    }
+
+
+     */
+
+    /* Recursive Method
+
+
+    static int f(int n){
+        if (n ==1 || n== 2){
+            return 1;
+        }
+        return f(n-1) + f(n-2);
+    }
+  */
+    static int sum(int a,int b){
+        int result = a + b;
+        System.out.println("Toplam : " + result);
+        return result;
+    }
+
+    static int sub(int a,int b){
+        int result = a - b;
+        System.out.println("Çıkarma : " + result);
+        return result;
+    }
+
+    static int multi(int a,int b){
+        int result = a * b;
+        System.out.println("Çarpma : " + result);
+        return result;
+    }
+
+    static int div(int a,int b){
+        int result = a / b;
+        if (b == 0){
+            return 0;
+        }
+        System.out.println("Bölme : " + result);
+        return result;
+    }
+    static void pow(int a,int b){
+        int result = 1;
+        for (int i = 1; i <= b; i++){
+            result *= a;
+        }
+        System.out.println("Sonuç : " + result);
+    }
+
+    static int mod(int a,int b){
+        int result = a % b;
+        System.out.println("Kalan : " + result);
+        return result;
+    }
+
+    static int enviorenment(int a,int b){
+        int result = (a + b) * 2;
+        System.out.println("Çevre : " + result);
+        return result;
+    }
+     static int area(int a,int b){
+        int result = a * b;
+        System.out.println("Alan : " + result);
+        return result;
+    }
     public static void main(String[] args) {
 
+        String menu = " 1-Toplama İşlemi\n" +
+                " 2-Çıkarma İşlemi\n" +
+                " 3-Çarpma İşlemi\n" +
+                " 4-Bölme İşlemi\n" +
+                " 5-Üs Alma İşlemi\n" +
+                " 6-Mod Alma İşlemi\n" +
+                " 7-Çevre Hesaplama İşlemi\n" +
+                " 8-Alan Hesaplama İşlemi\n" +
+                " 0-Çıkış Yap";
 
         Scanner input = new Scanner(System.in);
+
+        System.out.println(menu);
+        int select;
+
+        while (true){
+            System.out.println("İşlem seçiniz : ");
+            select = input.nextInt();
+            if (select == 0){
+                break;
+            }
+            System.out.print("Birinici sayıyı giriniz : ");
+            int a = input.nextInt();
+            System.out.print("İkinci sayıyı giriniz : ");
+            int b = input.nextInt();
+            switch (select){
+                case 1:
+                    sum(a,b);
+                    break;
+                case 2:
+                    sub(a,b);
+                    break;
+                case 3:
+                    multi(a,b);
+                    break;
+                case 4:
+                    div(a,b);
+                    break;
+                case 5:
+                    pow(a,b);
+                    break;
+                case 6:
+                    mod(a,b);
+                    break;
+                case 7:
+                    enviorenment(a,b);
+                    break;
+                case 8:
+                    area(a,b);
+                    break;
+                default:
+                    System.out.println("Hatalı işlem yaptınız");
+            }
+
+        }
+
 
         /* Not Ortalamsı Hesaplama
 
@@ -589,6 +730,222 @@ public class Main {
         }
 
          */
+        /*
+        System.out.println("Elmasın yarı basamak sayısı");
+            int n = input.nextInt();
+
+            for (int i = 1; i<= n; i++){
+                for (int k = 1; k<= n-i; k++){
+                    System.out.print(" ");
+                }
+
+                for (int j = 1; j <= i*2-1; j++){
+                    System.out.print("*");
+                }
+                System.out.println();
+             }
+
+        for (int i = n-1; i>= 0; i--){
+            for (int k = 1; k<= n-i; k++){
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= i*2-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+         */
+
+        /*
+            String userName,password;
+            int right = 3;
+            int balance = 1500;
+            int select;
+
+            while(right > 0){
+                System.out.print("Kullanıcı Adını Giriniz : ");
+                userName = input.nextLine();
+                System.out.print("Şifrenizi Giriniz : ");
+                password = input.nextLine();
+
+                if (userName.equals("alipasa") && password. equals("1")){
+                    System.out.println("Hoş geldiniz");
+                    System.out.println("1-Para Yatır\n" + "2-Para Çek\n" + "3-Bakiye Sorgula\n" + "4-Çıkış Yap");
+                    System.out.print("Yapmak İstediğiniz İşlemi Seçiniz : ");
+                    select = input.nextInt();
+
+                    if (select == 1){
+                        System.out.println("Yatırmak İstediğiniz Tutarı giriniz");
+                        int price = input.nextInt();
+                        balance += price;
+                        break;
+                    } else if (select == 2 ) {
+                        System.out.println("Çekmek İstediğiniz Tutarı giriniz");
+                        int price = input.nextInt();
+                        balance-= price;
+                        break;
+                    } else if (select == 3) {
+                        System.out.println("Toplam Paranız : " + balance);
+                        break;
+                    } else if (select == 4) {
+                        break;
+                    }else {
+                        System.out.println("Lütfen geçerli bir rakam giriniz!");
+                    }
+                }else {
+                    System.out.println("Yanlış kullanıcı adı veya şifre.");
+                    right--;
+                    if (right == 0){
+                        System.out.println("3 kere yanlış şifre girdiniz.");
+                        System.out.println("Hesabanız bloke oldu. Lütfen bankanız ile iletişime geçiniz.");
+                    }
+                }
+            }
+
+         */
+
+        /*
+        System.out.print("Küçük sayıyı giriniz : ");
+        int n1 = input.nextInt();
+        System.out.print("Büyük Sayıyı Giriniz : ");
+        int n2 = input.nextInt();
+        int ebob = 1;
+
+        for (int i = 1; i<=n1; i++){
+            if (n1 % i == 0 && n2 % i == 0){
+                ebob = i;
+            }
+        }
+        //EKOK = (n1*n2) / EBOB
+        int ekok = (n1*n2) / ebob;
+        System.out.println("EBOB : " + ebob);
+        System.out.println( "EKOK :" + ekok);
+
+         */
+        /*
+        System.out.print("Kaç tane sayı gireceksiniz : ");
+        int n = input.nextInt();
+        int result = 0;
+        System.out.print("1. Sayıyı giriniz : ");
+        int n1 = input.nextInt();
+        int max = n1;
+        int min = n1;
+
+        for (int i = 2; i <= n; i++){
+            System.out.print( i + ". Sayıyı giriniz : ");
+             n1 = input.nextInt();
+
+             if (n1 >max){
+                 max = n1;
+             }
+             if (n1<min){
+                 min = n1;
+             }
 
         }
+
+        System.out.println(max);
+        System.out.println(min);,
+
+         */
+
+            /*
+        int n;
+        int total = 0;
+        System.out.print("Bir sayı giriniz : ");
+        n = input.nextInt();
+
+        for (int i = 1; i < n; i++){
+            if (n % i == 0 ){
+                total += i;
+            }
+
+        }
+
+        if (total == n){
+            System.out.println(total + " Mükemmel sayıdır");
+
+        }else {
+            System.out.println(total + " Mükemmel sayı değildir");
+
+        }
+
+             */
+        /*
+        System.out.println("Basamak sayısı giriniz : ");
+        int n = input.nextInt();
+
+        for (int i = n-1; i>= 0; i--){
+            for (int k = 1; k<= n-i; k++){
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= i*2-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+         */
+
+        /*
+        int counter = 0;
+        for(int i=2;i<=100;i++) {
+            int control = 0;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    control = 1;
+                    break;
+                }
+            }
+
+            if (control == 0) {
+                System.out.print(i + " ");
+                counter++;
+            }
+        }
+
+         */
+
+        /*
+            int n;
+            System.out.print("Sayı giriniz : ");
+            n = input.nextInt();;
+
+            for (int i = 1; i <=10; i++){
+                System.out.println(n + " * " + i + " = " + n * i);
+            }
+
+         */
+        /*
+
+        System.out.println("Bir Sayı Giriniz :");
+        int n = input.nextInt();
+        int s1=0,s2=1,sum=0;
+        System.out.print(s1+" "+s2);
+        for(int i=1;i<=n;i++)
+        {
+            sum=s1+s2;
+            System.out.print(" "+sum);
+            s1=s2;
+            s2=sum;
+        }
+
+         */
+
+        /*
+        System.out.print("Bir sayı giriniz: ");
+        int num = input.nextInt();
+        System.out.println("-------------------");
+        isPalindrom(num);
+
+
+         */
+
+        /*Recursive Method
+        System.out.println(f(6));
+         */
     }
+}
