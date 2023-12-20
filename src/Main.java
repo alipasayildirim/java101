@@ -40,7 +40,7 @@ public class Main {
   */
     static int sum(int a,int b){
         int result = a + b;
-        System.out.println("Toplam : " + result);
+        System.out.println("Toplam  : " + result);
         return result;
     }
 
